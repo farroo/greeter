@@ -5,9 +5,10 @@ class GreeterHandler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type', 'text/html')
         self.end_headers()
-        # Replace "Your Name" with your actual name
-        message = "<h1>Hello from Your Name!</h1>"
+       # Added a second line to the greeting
+        message = "<h1>Hello from Farwa!</h1><p>Welcome to my containerized app assignment!</p>"
         self.wfile.write(message.encode('utf-8'))
+
 
 if __name__ == '__main__':
     server_address = ('', 8080)
